@@ -2,6 +2,10 @@
 
 <a href="https://github.com/hangarlabs/yellowgreen-hackathon"><img src="src/img/logo/teamlogo.jpg" width="150" height="150"></a>
 
+## Setup
+
+This project use webpack instead of gulp
+
 ## Table of Contents
  - [Getting Started](#getting-started)
  - [Usage](#usage)
@@ -29,19 +33,15 @@ yellowgreen-hackathon/
 │   │   └── main.js                    * Contains js files with submodules
 │   │   
 │   ├── scss/                          * Contains all SASS files
-│       ├── _bootstrap-custom.scss     * Contains custom bootstrap sass components
-│       └── main.scss                  * Contains SASS files with submodules
-│
-├── dist/                              * built directory with transpiled files
-│   ├── css/                           * Contains bundled css files
-│   │   └── main.css                   
-│   ├── js/
-│   │   └── main.bundled.js            * Contains bundled js files
+│   │   ├── _bootstrap-custom.scss     * Contains custom bootstrap sass components
+│   │   └── main.scss                  * Contains SASS files with submodules
+│   └─── index.html                         * main HTML with bundled files linked
+├── build/                              * built directory with transpiled files
+│   └── bundle.js                       * Contains bundled js files
 ├── node_modules/                      * Node dependencies
-├── index.html                         * main HTML with bundled files linked
 ├── .editorconfig                      * Defines coding styles between editors
 ├── .gitignore                         * Git ignore file
-├── gulpfile.js                        * Gulp tasks
+├── webpack.config.js                  * Webpack tasks
 ├── package.json                       * Our javascript dependencies
 └── README.md                          * This file
 ```
