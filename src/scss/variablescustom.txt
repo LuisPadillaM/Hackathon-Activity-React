@@ -1,0 +1,5 @@
+$navbar-default-color:             #777 !default;
+
+
+$navbar-default-link-color:                #fff !default;
+$navbar-default-link-hover-color:          #3db3b6 !default;

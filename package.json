@@ -1,0 +1,55 @@
+{
+  "name": "hackathon_gtx",
+  "version": "1.0.0",
+  "description": "Bootstrap Playground",
+  "main": "index.js",
+  "scripts": {
+    "init": "npm install",
+    "start": "webpack-dashboard -- webpack-dev-server --inline",
+    "start:production": "npm run start -- --production",
+    "build": "webpack --env production",
+    "build:production": "webpack --config webpack-production.config.js -p"
+  },
+  "keywords": [
+    "bootstrap",
+    "sass",
+    "es6",
+    "firebase"
+  ],
+  "author": "Luis Padilla Moreno",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "d3": "^4.5.0",
+    "firebase": "^3.6.1",
+    "isomorphic-fetch": "^2.2.1",
+    "jquery": "^3.1.1",
+    "node-uuid": "^1.4.7",
+    "react": "^15.4.2",
+    "react-bootstrap": "^0.30.7",
+    "react-dom": "^15.4.2",
+    "reactfire": "^1.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.9.1",
+    "eslint-loader": "^1.6.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.26.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^4.1.1",
+    "sass-loader": "^4.1.1",
+    "strip-loader": "^0.1.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.14.0",
+    "webpack-dashboard": "^0.2.1"
+  }
+}

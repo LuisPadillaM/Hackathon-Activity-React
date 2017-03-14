@@ -1,0 +1,166 @@
+@import "./bootstrap-custom";
+@import "./custom-checkbox";
+
+$primary-background: #3db3b6;
+
+@mixin border-radius($radius){
+    @include border-top-radius($radius);
+    @include border-right-radius($radius);
+    @include border-bottom-radius($radius);
+    @include border-left-radius($radius);
+}
+
+.navbar {
+	border:0;
+}
+
+.fixedTop{
+ position:fixed;
+ top:0;
+ left:0;
+ right:0;
+}
+.alertModal{
+ margin:60px 10px 0 10px;
+ @include border-radius(8px);
+ // margin-top: 60px;//50 padding of navbar plus own margin
+}
+
+.navbar-default {
+	background: linear-gradient(to bottom, #2c3e50 0%, #2c3e50 100%);
+}
+
+html, body {
+  height: 100%;
+}
+
+
+body{
+	margin:0;
+	color: #808181;
+}
+
+.navbar-nav > li:not(:last-child):not(.active):after {
+    height: 40%;
+    content: "";
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    top: 50%;
+    background: white;
+    width: 1px;
+    transform: translateY(-50%);
+}
+
+#mainContainer{
+	min-height: calc(100% - 50px);
+	padding:0;
+	position:relative;
+	padding-bottom: 238px;
+}
+
+.visibility-hidden{
+	visibility: hidden;
+}
+
+.banner{
+	background-color: #bae2de;
+	img{
+		max-width:1200px;
+		width:100%;
+	}
+
+	&:after{
+	content: '';
+	padding-top:40px;
+	background-color: $primary-background;
+	display:block;
+	}
+}
+
+.day_box{
+	h3{
+		margin-bottom:0.9em;
+	}
+}
+
+.loader>img{
+	height:100px;
+	width:auto;
+}
+
+.logo {
+	width: 80px;
+}
+
+.formContainer {
+	padding: 5% 0 3% 0;
+    position:relative;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.mb-0{
+	text-align: center;
+	padding: 10px 0;
+	border-radius: 4px;
+	background-color: $primary-background;
+	color:#fff;
+	font-weight: normal;
+
+	span{
+		margin-right: 20px;
+		transition: transform 0.5s ease-in-out;
+	}
+	&.collapsed span{
+		transform: rotate(-90deg);
+	}
+}
+
+.footer {
+	position:absolute;
+	bottom:0;
+	height:238px;
+	width:100%;
+
+	img.naranjas {
+		padding-top: 69px;
+	}
+}
+
+
+
+@media (max-width: $screen-sm) {
+
+
+	.navbar-nav > li:not(:last-child):not(.active):after {
+		display:none;
+	}
+
+	.formContainer{
+		padding:0 15px 5% 15px;
+	}
+
+	.day_box>h3{
+		margin-bottom:0;
+	}
+
+	.checkbox{
+		/*display:block;*/
+		width:inherit;
+		max-width: 55%;
+		text-align: left;
+		margin:10px auto;
+	}
+
+	.footer>div:nth-child(3){
+		text-align:center;
+	}
+
+}
+
+@media (min-width: $screen-sm) {
+	.day_box{
+		padding-left: 0;
+	}
+}
